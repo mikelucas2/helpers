@@ -4,8 +4,8 @@ Helpers for systems administrative
 .rc files
 ---------
 
-`.bashrc`
+``.bashrc``
 - additional functionality for git usage
 
-`.vimrc`
+``.vimrc``
 - line numbers and spacing characters added
