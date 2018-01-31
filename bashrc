@@ -58,4 +58,20 @@ function parse_git_dirty {
   fi
 }
 
-export PS1="\[\e[36m\]\W\[\e[m\]\[\e[32m\]\u@\h\`parse_git_branch\`\[\e[m\] $ "
+#export PS1="\[\e[36m\]\u@\h\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\] $ "
+
+function prompt {
+  local BLUE="\[\033[0;34m\]"
+  local DARK_BLUE="\[\033[1;34m\]"
+  local CYAN="\[\033[0;36m\]"
+  local DARK_CYAN="\[\033[1;36m\]"
+  local GREEN="\[\033[0;32m\]"
+  local DARK_GREEN="\[\033[1;32m\]"
+  local RED="\[\033[0;31m\]"
+  local DARK_RED="\[\033[1;31m\]"
+  local NO_COLOR="\[\033[0m\]"
+
+  export PS1="$CYAN\u@\h $RED\w$GREEN\`parse_git_branch\` $NO_COLOR\n$ "
+}
+
+prompt
